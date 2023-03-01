@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <style>
+            body {
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                background-image: url("data:image/jpeg;base64,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");
+                background-repeat:no-repeat;
+                background-size: cover;
+            }
+            #clock {
+                width: 200px;
+                height: 200px;
+                border: 3px solid;
+                border-radius: 50%;
+                text-align:center;
+                margin: 0 auto;
+                font-weight: bolder;
+                position: relative;
+                background-color: aliceblue;
+            }
+            #clock .number {
+                --rotation:0;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                text-align:center;
+                transform: rotate(var(--rotation));
+                font-size: 1.5rem;
+            }
+
+            #clock .num1 { --rotation: 30deg; }
+            #clock .num2 { --rotation: 60deg; }
+            #clock .num3 { --rotation: 90deg; }
+            #clock .num4 { --rotation: 120deg; }
+            #clock .num5 { --rotation: 150deg; }
+            #clock .num6 { --rotation: 180deg; }
+            #clock .num7 { --rotation: 210deg; }
+            #clock .num8 { --rotation: 240deg; }
+            #clock .num9 { --rotation: 270deg; }
+            #clock .num10 { --rotation: 300deg; }
+            #clock .num11 { --rotation: 330deg; }
+
+            #clock .hand {
+                --rotation: 0;
+                position: absolute;
+                bottom: 50%;
+                left: 50%;
+                width: 5px;
+                height: 50%;
+                background-color: black;
+                border: 1px solid white;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                transform-origin: bottom;
+                z-index: 10;
+                transform: translateX(-50%) rotate(calc(var(--rotation)*1deg));
+            }
+            #clock::after {
+                content: '';
+                position:absolute;
+                background-color:black;
+                z-index:11;
+                width:10px;
+                height:10px;
+                top:50%;
+                left:50%;
+                transform: translate(-50%, -50%);
+                border-radius: 50%;
+            }
+            #clock .hand.second-hand {
+                width: 1px;
+                height: 45%;
+                background-color: red;
+            }
+            #clock .hand.min-hand {
+                width: 3px;
+                height: 40%;
+                background-color: black;
+            }
+            #clock .hand.hour-hand {
+                width: 5px;
+                height: 30%;
+                background-color: black;
+            }                     
+        </style>
+    </head>
+    <body>
+        <div id="clock">
+            <div class="hand hour-hand"></div>
+            <div class="hand min-hand"></div>
+            <div class="hand second-hand"></div>
+            <div class="number num1">1</div>
+            <div class="number num2">2</div>
+            <div class="number num3">3</div>
+            <div class="number num4">4</div>
+            <div class="number num5">5</div>
+            <div class="number num6">6</div>
+            <div class="number num7">7</div>
+            <div class="number num8">8</div>
+            <div class="number num9">9</div>
+            <div class="number num10">10</div>
+            <div class="number num11">11</div>
+            <div class="number num12">12</div>
+        </div>
+        <script>
+
+            const secondHand = document.querySelector('.second-hand')
+            const minsHand = document.querySelector('.min-hand')
+            const hourHand = document.querySelector('.hour-hand')
+
+            function setClock() {
+                const cur = new Date()
+                const sDegree = cur.getSeconds()/60
+                const mDegree = (sDegree +  cur.getMinutes())/60
+                const hDegree = (mDegree + cur.getHours())/12
+                setRotation(secondHand, sDegree)
+                setRotation(minsHand, mDegree)
+                setRotation(hourHand, hDegree)
+            }
+            function setRotation(ele, roDegree) {
+                ele.style.setProperty('--rotation', roDegree*360)
+            }
+            setInterval(setClock, 1000)
+            setClock()
+        </script>
+    </body>
+</html>
